@@ -3,19 +3,19 @@ import pandas as pd
 import requests
 from io import StringIO
 
-url = 'https://raw.githubusercontent.com/ameliabeddy/FMSCarbon/CarbonDashboardLive/main/pages/data/commitments.csv'
-response = requests.get(url)
-if response.status_code == 200:
-    commitments = pd.read_csv(StringIO(response.text))
-else:
-    st.error("Failed to load data from GitHub.")
+#url = 'https://raw.githubusercontent.com/ameliabeddy/FMSCarbon/CarbonDashboardLive/main/pages/data/commitments.csv'
+#response = requests.get(url)
+#if response.status_code == 200:
+#    commitments = pd.read_csv(StringIO(response.text))
+#else:
+#    st.error("Failed to load data from GitHub.")
         
 
-#commitments = pd.read_csv("CarbonDashboardLive/pages/data/commitments.csv")
+commitments = pd.read_csv("pages/data/commitments.csv")
 
 
 st.set_page_config(page_title="CarbonDashboard", layout="wide")
-st.image("FMSlogo.png", width=150)
+st.image("assets/FMSlogo.png", width=150)
 st.markdown("Welcome to FMS's Sustainability Dashboard")
 st.markdown("Use the sidebar to navigate between our suppliers and their sustainability objectives as well as a selection of products")
 
