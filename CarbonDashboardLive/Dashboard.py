@@ -11,7 +11,7 @@ from io import StringIO
 #    st.error("Failed to load data from GitHub.")
         
 
-commitments = pd.read_csv("pages/data/commitments.csv")
+commitments = pd.read_csv("pages/commitments.csv")
 
 
 st.set_page_config(page_title="CarbonDashboard", layout="wide")
