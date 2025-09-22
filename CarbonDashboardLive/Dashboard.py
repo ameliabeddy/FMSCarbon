@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 from io import StringIO
 
-url = 'https://raw.githubusercontent.com/[ameliabeddy]/[FMSCarbon]/main/pages/data/commitments.csv'
+url = 'https://raw.githubusercontent.com/ameliabeddy/FMSCarbon/CarbonDashboardLive/main/pages/data/commitments.csv'
 response = requests.get(url)
 if response.status_code == 200:
     commitments = pd.read_csv(StringIO(response.text))
