@@ -1,7 +1,17 @@
 import streamlit as st
 import pandas as pd
+import requests
+from io import StringIO
 
-commitments = pd.read_csv("CarbonDashboardLive/pages/data/commitments.csv")
+url = 'https://raw.githubusercontent.com/[ameliabeddy]/[FMSCarbon]/main/pages/data/commitments.csv'
+response = requests.get(url)
+if response.status_code == 200:
+    commitments = pd.read_csv(StringIO(response.text))
+else:
+    st.error("Failed to load data from GitHub.")
+        
+
+#commitments = pd.read_csv("CarbonDashboardLive/pages/data/commitments.csv")
 
 
 st.set_page_config(page_title="CarbonDashboard", layout="wide")
