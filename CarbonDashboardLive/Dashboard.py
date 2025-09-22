@@ -15,7 +15,7 @@ commitments = pd.read_csv("CarbonDashboardLive/pages/commitments.csv")
 
 
 st.set_page_config(page_title="CarbonDashboard", layout="wide")
-st.image("assets/FMSlogo.png", width=150)
+st.image("CarbonDashboardLive/assets/FMSlogo.png", width=150)
 st.markdown("Welcome to FMS's Sustainability Dashboard")
 st.markdown("Use the sidebar to navigate between our suppliers and their sustainability objectives as well as a selection of products")
 
