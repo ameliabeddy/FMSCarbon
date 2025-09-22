@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Load data
-products = pd.read_csv("data/products.csv")
+products = pd.read_csv("products.csv")
 st.title("Products by Supplier")
 
 suppliers_list = sorted(products["Supplier"].unique())

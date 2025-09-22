@@ -4,7 +4,7 @@ import pandas as pd
 
 
 # Load CSV with correct encoding
-df = pd.read_csv("data/suppliers.csv", encoding='unicode_escape')
+df = pd.read_csv("suppliers.csv", encoding='unicode_escape')
 
 st.title("Supplier Sustainability Overview")
 
